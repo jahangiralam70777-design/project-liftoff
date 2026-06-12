@@ -34,7 +34,6 @@ export default defineConfig({
     ? {
         nitro: {
           preset: nitroPreset,
-          output: { dir: "dist", serverDir: "dist/server", publicDir: "dist/client" },
         },
       }
     : {}),
