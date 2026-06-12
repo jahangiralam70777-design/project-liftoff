@@ -11,8 +11,8 @@ services:
     # Vite/Rollup build of this app peaks well above Node's default heap cap,
     # which causes "FATAL ERROR: JavaScript heap out of memory" on Render.
     # It is NOT set as a service env var so the runtime keeps Node defaults.
-    buildCommand: NODE_OPTIONS=--max-old-space-size=4096 npm install --include=dev && NODE_OPTIONS=--max-old-space-size=4096 npm run build
-    startCommand: npm run start
+    buildCommand: NODE_OPTIONS=--max-old-space-size=4096 npm install --include=dev && NODE_OPTIONS=--max-old-space-size=4096 NITRO_PRESET=node-server npm run build
+    startCommand: node dist/server/index.mjs
     healthCheckPath: /
     autoDeploy: true
     envVars:
