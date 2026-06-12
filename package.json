@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "build:node": "NITRO_PRESET=node-server vite build",
     "preview": "vite preview",
-    "start": "node .output/server/index.mjs",
+    "start": "node dist/server/index.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
