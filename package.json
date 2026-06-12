@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "NITRO_PRESET=node-server vite build",
     "build:dev": "vite build --mode development",
     "build:node": "NITRO_PRESET=node-server vite build",
     "preview": "vite preview",
-    "start": "node dist/server/index.mjs",
+    "start": "node .output/server/index.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
