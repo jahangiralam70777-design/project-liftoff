@@ -22,6 +22,8 @@ export default defineConfig({
       // and skip the gzip-size report pass (it re-reads every chunk into RAM).
       sourcemap: false,
       reportCompressedSize: false,
+      minify: "esbuild",
+      chunkSizeWarningLimit: 1600,
     },
     // Strip console.log/console.debug in production bundles; keep warn/error
     // so structured logging still flows to the sandbox/server logs.
